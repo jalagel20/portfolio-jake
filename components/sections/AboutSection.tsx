@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/custom/SectionHeading";
 import { TechBadge } from "@/components/custom/TechBadge";
@@ -8,7 +9,6 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerChildren";
 import { personalInfo } from "@/lib/data/personal";
 import { resumeData, skillCategories } from "@/lib/data/resume";
-import { Separator } from "@/components/ui/separator";
 
 export function AboutSection() {
   // Group skills by category
@@ -28,9 +28,30 @@ export function AboutSection() {
       />
 
       <div className="grid md:grid-cols-2 gap-12 items-start">
-        {/* Bio */}
+        {/* Photo + Bio */}
         <FadeIn direction="left">
           <div className="space-y-6">
+            {/* Profile Photo - Centered */}
+            <div className="flex justify-center">
+              <motion.div
+                className="relative w-52 h-64"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl rotate-3" />
+                <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-border shadow-xl">
+                  <Image
+                    src="/images/profile.jpg"
+                    alt={personalInfo.name}
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Bio */}
             <div className="prose prose-lg dark:prose-invert max-w-none">
               {personalInfo.bio.split("\n").map((paragraph, index) => (
                 <p key={index} className="text-muted-foreground leading-relaxed">
