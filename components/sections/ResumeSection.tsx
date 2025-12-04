@@ -190,12 +190,12 @@ export function ResumeSection() {
               className="relative"
               style={{ perspective: 1000 }}
             >
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden max-w-4xl mx-auto">
                 <CardContent className="p-0">
-                  <div className="relative bg-muted aspect-[8.5/11] max-h-[800px]">
+                  <div className="relative bg-muted" style={{ height: "80vh", maxHeight: "900px" }}>
                     <iframe
-                      src="/resume.pdf#view=FitH"
-                      className="w-full h-full min-h-[600px]"
+                      src="/resume.pdf#view=Fit&toolbar=0"
+                      className="w-full h-full border-0"
                       title="Resume Preview"
                     />
                     <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-background/20 to-transparent" />

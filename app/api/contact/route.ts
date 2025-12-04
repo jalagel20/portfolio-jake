@@ -3,7 +3,14 @@ import { Resend } from "resend";
 import { contactFormSchema } from "@/lib/validations/contact";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend lazily to avoid build-time errors
+function getResend() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY is not configured");
+  }
+  return new Resend(apiKey);
+}
 
 export async function POST(request: Request) {
   try {
@@ -19,6 +26,7 @@ export async function POST(request: Request) {
     }
 
     // Send email using Resend
+    const resend = getResend();
     const { error } = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: process.env.CONTACT_EMAIL || "your.email@example.com",
