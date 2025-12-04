@@ -12,7 +12,7 @@ const socialLinks = [
   { icon: Github, href: personalInfo.socials.github, label: "GitHub" },
   { icon: Linkedin, href: personalInfo.socials.linkedin, label: "LinkedIn" },
   { icon: Twitter, href: personalInfo.socials.twitter, label: "Twitter" },
-];
+].filter(link => link.href); // Only show links that have a URL
 
 export function Footer() {
   const scrollToTop = () => {

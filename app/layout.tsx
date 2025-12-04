@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jake Alagel | Software Engineer",
-  description: "Portfolio of Jake Alagel - Software Engineer passionate about building great products",
-  keywords: ["software engineer", "developer", "portfolio", "web development"],
-  authors: [{ name: "Jake Alagel" }],
+  title: "Jacob Alagel | Full-Stack Software Engineer",
+  description: "Portfolio of Jacob Alagel - Full-Stack Software Engineer building products that solve real problems",
+  keywords: ["software engineer", "full-stack developer", "react", "next.js", "typescript", "portfolio"],
+  authors: [{ name: "Jacob Alagel" }],
   openGraph: {
-    title: "Jake Alagel | Software Engineer",
-    description: "Portfolio of Jake Alagel - Software Engineer passionate about building great products",
+    title: "Jacob Alagel | Full-Stack Software Engineer",
+    description: "Portfolio of Jacob Alagel - Full-Stack Software Engineer building products that solve real problems",
     type: "website",
   },
 };

@@ -1,15 +1,14 @@
 export const personalInfo = {
-  name: "Jake Alagel",
-  title: "Software Engineer",
-  tagline: "Building thoughtful software solutions",
-  email: "your.email@example.com",
-  location: "Your Location",
-  bio: `I'm a passionate software engineer who loves building products that make a difference.
-  With a focus on modern web technologies, I strive to create clean, efficient, and user-friendly applications.`,
+  name: "Jacob Alagel",
+  title: "Full-Stack Software Engineer",
+  tagline: "Building products that solve real problems",
+  email: "alagel.jacob@gmail.com",
+  location: "Naples, FL",
+  bio: `I'm a full-stack engineer who thrives on turning ideas into polished, production-ready products. From legal tech to healthcare apps, I've shipped 5+ projects as a solo engineer—handling everything from architecture to deployment. I care deeply about performance, clean code, and building things that actually help people.`,
   socials: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    twitter: "https://twitter.com/yourusername",
+    github: "https://github.com/jalagel20",
+    linkedin: "https://linkedin.com/in/jacob-alagel",
+    twitter: "", // Leave empty if not used
   },
 };
 
